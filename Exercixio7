@@ -37,7 +37,7 @@ public class Exercicio7 {
                   Vmaximo = valor;
                      
             }
-           }while(valor > 0);
+           }while(valor >= 0);
              media = soma / quantidade;
 
             System.out.println("Maior valor informado: " + Vmaximo);
