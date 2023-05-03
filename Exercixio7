@@ -1,0 +1,51 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package ab.exercicio7;
+
+import java.io.DataInputStream;
+import java.io.IOException;
+
+/**
+ *
+ * @author Caio
+ */
+public class Exercicio7 {
+
+    public static void main(String[] args) throws IOException{
+       DataInputStream dado;
+       int valor = 0, quantidade = 0, soma = 0, media =0, 
+           Vmaximo = 0, Vminimo = 0;
+  
+       String apoio;
+       
+       do{
+           System.out.print("Digite um número (negativo ou 0 para sair): ");
+           dado = new DataInputStream(System.in);
+           apoio = dado.readLine();
+           valor = Integer.parseInt(apoio);
+           
+           if(valor > 0 ){
+               soma += valor;
+               quantidade++;
+               
+           } if (valor < Vminimo){
+                 Vminimo = valor;
+                     
+           } if (valor > Vmaximo){
+                  Vmaximo = valor;
+                     
+            }
+           }while(valor > 0);
+             media = soma / quantidade;
+
+            System.out.println("Maior valor informado: " + Vmaximo);
+            System.out.println("Menor valor informado: " + Vminimo);
+            System.out.println("Quantidade de valores informados: " + quantidade);
+            System.out.println("Soma dos valores informados: " + soma);
+            System.out.println("Média dos valores informados: " + media);
+        
+       }
+    }
+
