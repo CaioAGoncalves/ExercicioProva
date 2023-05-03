@@ -1,0 +1,51 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package ab.exercicio4;
+
+import java.io.DataInputStream;
+import java.io.IOException;
+
+/**
+ *
+ * @author Caio
+ */
+public class Exercicio4 {
+
+    public static void main(String[] args) throws IOException{
+        DataInputStream dado;
+        String apoio = "";
+        int L1=0,L2=0,L3=0;
+        
+        System.out.print("Lado 1: ");
+        dado = new DataInputStream(System.in);
+        apoio = dado.readLine();
+        L1 = Integer.parseInt(apoio);
+        
+        System.out.print("Lado 2: ");
+        dado = new DataInputStream(System.in);
+        apoio = dado.readLine();
+        L2 = Integer.parseInt(apoio);
+        
+        System.out.print("Lado 3: ");
+        dado = new DataInputStream(System.in);
+        apoio = dado.readLine();
+        L3 = Integer.parseInt(apoio);
+        
+        if(L1 < L2 + L3 && L2 < L1 + L3 && L3 < L1 + L2){
+           
+            if(L1 == L2 && L2 == L3){
+                System.out.print("Triângulo Equilátero");
+            } else if (L1 == L2 || L1 == L3 || L2 == L3){
+                System.out.print("Triângulo Isóceles");
+            }else {
+             System.out.print("Triângulo Eescaleno");
+            } 
+           
+            }else {
+                System.out.print("Não é um Triângulo");  
+            
+           }   
+    }                    
+}
