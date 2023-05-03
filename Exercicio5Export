@@ -1,0 +1,89 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package ab.exercicio5;
+
+import java.io.DataInputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+/**
+ *
+ * @author Caio
+ */
+public class Exercicio5 {
+
+    public static void main(String[] args) throws IOException{
+            DataInputStream dado;
+            String apoio = "", nome ="";
+            float peso = 0;
+            
+            System.out.print("Nome: ");
+            dado = new DataInputStream(System.in);
+            nome = dado.readLine();
+            
+            System.out.print("Peso: ");
+            dado = new DataInputStream(System.in);
+            apoio = dado.readLine();
+            peso = Float.parseFloat(apoio);
+            
+            if(peso < 65){
+                FileWriter arq = new FileWriter("C:\\Users\\Caio\\Documents\\TesteNetBenas\\Pesofile.txt");
+              PrintWriter gravarArq = new PrintWriter(arq);
+              gravarArq.printf("Nome fornecido: " + nome + "\n");
+              gravarArq.printf("Peso fornecido: " + peso + "\n");
+              gravarArq.printf("O lutador " + nome + " pesa " + peso + "kg e se enquadra na categoria Pena");
+              arq.close();
+              
+            }else if (peso >= 65 && peso < 72){
+              FileWriter arq = new FileWriter("C:\\Users\\Caio\\Documents\\TesteNetBenas\\Pesofile.txt");
+              PrintWriter gravarArq = new PrintWriter(arq);
+              gravarArq.printf("Nome fornecido: " + nome + "\n");
+              gravarArq.printf("Peso fornecido: " + peso + "\n");
+              gravarArq.printf("O lutador " + nome + " pesa " + peso + "kg e se enquadra na categoria Leve");
+              arq.close();
+
+            }else if (peso >= 72 && peso < 79){
+              FileWriter arq = new FileWriter("C:\\Users\\Caio\\Documents\\TesteNetBenas\\Pesofile.txt");
+               PrintWriter gravarArq = new PrintWriter(arq);
+              gravarArq.printf("Nome fornecido: " + nome + "\n");
+              gravarArq.printf("Peso fornecido: " + peso + "\n");
+              gravarArq.printf("O lutador " + nome + " pesa " + peso + "kg e se enquadra na categoria Ligeiro");
+              arq.close();
+              
+            }else if (peso >= 79 && peso <86){ 
+              FileWriter arq = new FileWriter("C:\\Users\\Caio\\Documents\\TesteNetBenas\\Pesofile.txt");
+              PrintWriter gravarArq = new PrintWriter(arq);
+              gravarArq.printf("Nome fornecido: " + nome + "\n");
+              gravarArq.printf("Peso fornecido: " + peso + "\n");
+              gravarArq.printf("O lutador " + nome + " pesa " + peso + "kg e se enquadra na categoria Meio médio");
+              arq.close();
+              
+            }else if (peso >= 86 && peso < 93){
+              FileWriter arq = new FileWriter("C:\\Users\\Caio\\Documents\\TesteNetBenas\\Pesofile.txt");
+              PrintWriter gravarArq = new PrintWriter(arq);
+              gravarArq.printf("Nome fornecido: " + nome + "\n");
+              gravarArq.printf("Peso fornecido: " + peso + "\n");
+              gravarArq.printf("O lutador " + nome + " pesa " + peso + "kg e se enquadra na categoria Médio");
+              arq.close();
+              
+            }else if (peso >= 93 && peso <100){
+              FileWriter arq = new FileWriter("C:\\Users\\Caio\\Documents\\TesteNetBenas\\Pesofile.txt");
+              PrintWriter gravarArq = new PrintWriter(arq);
+              gravarArq.printf("Nome fornecido: " + nome + "\n");
+              gravarArq.printf("Peso fornecido: " + peso + "\n");
+              gravarArq.printf("O lutador " + nome + " pesa " + peso + "kg e se enquadra na categoria Meio pesado");
+              arq.close();
+              
+            }else if (peso >= 100){ 
+              FileWriter arq = new FileWriter("C:\\Users\\Caio\\Documents\\TesteNetBenas\\Pesofile.txt");
+              PrintWriter gravarArq = new PrintWriter(arq);
+              gravarArq.printf("Nome fornecido: " + nome + "\n");
+              gravarArq.printf("Peso fornecido: " + peso + "\n");
+              gravarArq.printf("O lutador " + nome + " pesa " + peso + "kg e se enquadra na categoria Pesado");
+              arq.close();
+            }
+    }
+}
