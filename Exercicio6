@@ -1,0 +1,38 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package ab.exercicio6;
+
+import java.io.DataInputStream;
+import java.io.IOException;
+
+/**
+ *
+ * @author Caio
+ */
+public class Exercicio6 {
+
+    public static void main(String[] args) throws IOException{
+        DataInputStream dado;
+        String apoio="";
+        int x =0;
+        
+        //Whlie(true) vai repetir infinitamente se não tiver um break
+        while (true) {
+        System.out.print("Digite um numero(Digite 0 para encerrar): ");
+        dado = new DataInputStream(System.in);
+        apoio = dado.readLine();
+        x = Integer.parseInt(apoio);
+       
+        if(x == 0 ){
+            System.out.print("Encerrando...");
+         break;   
+        } else if (x >0){
+            System.out.print("Número positivo \n");
+        } else {
+             System.out.print("Número negativo \n");
+        }  
+    }
+    }
+}
