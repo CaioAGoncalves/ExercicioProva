@@ -1,0 +1,46 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package ab.exercicio2;
+
+import java.io.DataInputStream;
+import java.io.IOException;
+
+/**
+ *
+ * @author Caio
+ */
+public class Exercicio2 {
+          
+    public static void main(String[] args) throws IOException{
+       DataInputStream dados;
+       
+       String apoio = "";
+       int n1 = 0;
+       int n2 = 0;
+       int resultado = 0; 
+
+       System.out.print("Número 1: ");
+      dados = new DataInputStream(System.in);
+      apoio = dados.readLine();
+      n1 = Integer.parseInt(apoio);
+      
+      System.out.print("Número 2: ");
+      dados = new DataInputStream(System.in);
+      apoio = dados.readLine();
+      n2 = Integer.parseInt(apoio);
+      
+      if(n1 < 0){
+          System.out.print("Dados de Entrada são Inválidos");
+      } else if (n2 < 0){
+          System.out.print("Dados de Entrada são Inválidos");
+      } else {
+          resultado = n1 + n2;
+      System.out.print("Soma de "+ n1 + " com " + n2 + " = " + resultado);
+      }
+       }   
+    
+}
+    
+
