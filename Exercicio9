@@ -1,0 +1,66 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package ab.exercicio9;
+
+import java.io.DataInputStream;
+import java.io.IOException;
+
+/**
+ *
+ * @author Caio
+ */
+public class Exercicio9 {
+
+    public static void main(String[] args) throws IOException {
+       DataInputStream dado;
+        String apoio ="";
+        int max =0, min =0, x = 0, total = 0, quantidade = 0,
+            valor[] = new int[100], contador =0;
+        
+        System.out.print("Digite o malor Mínimo: ");
+        dado = new DataInputStream(System.in);
+        apoio = dado.readLine();
+        min = Integer.parseInt(apoio);
+        
+        System.out.print("Digite o malor Máximo: ");
+        dado = new DataInputStream(System.in);
+        apoio = dado.readLine();
+        max = Integer.parseInt(apoio);
+       
+        if(min > max){
+            System.out.print("Valor mínimo maior que máximo. Invertendo\n");
+            int troca = min;
+            min = max;
+            max = troca;
+    }    
+        while(true){
+            System.out.print("Digite um número(0 para sair): ");
+            dado= new DataInputStream(System.in);
+            apoio = dado.readLine();
+            x = Integer.parseInt(apoio);
+            
+            if (x == 0){
+                System.out.print("Sistema encerrado!");
+                break;
+            } else if (x >= min && x <= max){
+                valor[contador] = x;
+                contador++;
+                quantidade++;
+                total += x;
+            } else {
+                System.out.print("Valor fora do intervalo " + min +" e "+ max + " ignorado na totalização\n");
+                  }
+            }
+                System.out.println("Valores no intervalo [" + min + ", " + max + "]:");
+            for (int i = 0; i < contador; i++) {
+            System.out.println("[ " + valor[i] + " ]");
+            }
+            
+            System.out.print("Quantidade de números digitados: " + quantidade+ "\n");
+            System.out.print("Soma dos números: " + total + "\n");
+    }
+  }
+
+
