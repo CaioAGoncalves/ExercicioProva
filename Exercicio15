@@ -1,0 +1,35 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package ab.exercicio15;
+
+import java.io.DataInputStream;
+import java.io.IOException;
+
+/**
+ *
+ * @author Caio
+ */
+public class Exercicio15 {
+
+    public static void main(String[] args) throws IOException{
+        DataInputStream dado;
+        String apoio="";
+        int anoNasc = 0, anoAtual = 0;
+        
+        System.out.print("Digite o ano atual: ");
+        dado = new DataInputStream(System.in);
+        apoio = dado.readLine();
+        anoAtual = Integer.parseInt(apoio);
+        
+        System.out.print("Digite o seu ano de Nascimento: ");
+        dado = new DataInputStream(System.in);
+        apoio = dado.readLine();
+        anoNasc = Integer.parseInt(apoio);
+        
+        
+        System.out.print("Sua idade atual é: " + (anoAtual - anoNasc));
+        
+    }
+}
