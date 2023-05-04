@@ -1,0 +1,56 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package ab.exercicio14;
+
+import java.io.DataInputStream;
+import java.io.IOException;
+
+/**
+ *
+ * @author Caio
+ */
+public class Exercicio14 {
+
+    public static void main(String[] args) throws IOException {
+       DataInputStream dado;
+       String apoio = "", nome = "";
+      double salario = 0, reajust = 0, somaSalarioA =0, somaSalarioR=0;
+       
+       
+       while(true){
+       System.out.print("Seu nome: ");
+       dado = new DataInputStream(System.in);
+       nome = dado.readLine();
+       
+        if(nome.equals("fim")){
+           break;
+        }
+       System.out.print("Seu Salário Atual: ");
+       dado = new DataInputStream(System.in);
+       apoio = dado.readLine();
+       salario = Double.parseDouble(apoio);
+       
+        if(salario <= 150){
+         reajust = salario * 2.5;  
+       } else if(salario <= 300){
+         reajust = salario * 2.0;  
+       } else if(salario <= 600){
+         reajust = salario * 1.5;
+       } else {
+         reajust = salario * 1.0;
+       }
+       somaSalarioA += salario;
+       somaSalarioR += reajust;
+       
+       System.out.println("Nome: " + nome);
+       System.out.println("Salário atual: " + salario);
+       System.out.println("Salário reajustado: " + reajust+ "\n");
+       }
+       System.out.print("Soma dos salários: " + somaSalarioA+ "\n");
+       System.out.print("Soma dos Reajustados: " + somaSalarioR+ "\n");
+       System.out.print("Diferença dos salários: " + (somaSalarioR-somaSalarioA+ "\n"));
+       
+}
+}
