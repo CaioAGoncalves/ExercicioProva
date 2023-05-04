@@ -1,0 +1,26 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package ab.exercicio13;
+
+/**
+ *
+ * @author Caio
+ */
+public class Exercicio13 {
+
+    public static void main(String[] args) {
+       int numero = 150;
+        
+       while (true){
+           if(numero <= 300){
+           System.out.print(numero + "\n");
+           numero++;
+           
+           }else{
+               break;
+           }
+       }
+    }
+}
