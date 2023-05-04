@@ -1,0 +1,56 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package ab.exercicio10;
+
+import java.io.DataInputStream;
+import java.io.IOException;
+
+/**
+ *
+ * @author Caio
+ */
+public class Exercicio10 {
+
+    public static void main(String[] args) throws IOException{
+        DataInputStream dado;
+        String apoio="";
+        
+        int n =0, a[] = new int[n], pos[]= new int[n], neg[] = new int [n],
+           contadorNeg = 0, contadorPos = 0;
+      
+           while(true){
+           System.out.print("Digite um número entre 0 e 50: ");
+           dado = new DataInputStream(System.in);
+           apoio = dado.readLine();
+           n = Integer.parseInt(apoio);
+           
+           if(n > 0 && n < 50){
+               break;
+           } else {
+               System.out.print("o número não está entre 0 e 50, digite novamente\n");
+                }
+           }
+           for(int i= 0; i < n; i++ ){
+               System.out.print("Digite o "+ (i+1) + " do vetor: ");
+               dado = new DataInputStream(System.in);
+               apoio = dado.readLine();
+               a[i] = Integer.parseInt(apoio);
+               
+               if(a[i] < 0){
+                  neg[contadorNeg]=a[i];
+                  contadorNeg++;
+               } else if (a[i] > 50){
+                   pos[contadorPos] = a[i];
+                   contadorPos++;
+               }
+           }
+                int NovoPositivo[] = new int[contadorPos];
+                int NovoNegativo[] = new int[contadorNeg];
+                
+               for (int i = 0; i < contadorNeg; i++){
+                NovoNegativo[i] = neg[i];  
+             }
+    }     // NÃO ENTENDI NEM OQ EU FIZ, N SEI COMO CONTINUAR ESSA MERDA
+}
